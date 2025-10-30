@@ -9,7 +9,7 @@
   <body>
     <header>
       <h1 class="logo">Kafe Blå</h1>
-      <nav>
+      <nav class="hamburgermeny">
         <ul>
           <li><a href="index.html">Hjem</a></li>
           <li><a href="menu.html">Meny</a></li>
@@ -19,19 +19,21 @@
     </header>
 
     <main>
-      <section>
+      <section class="hero">
         <h2>Velkommen til Kafe Blå</h2>
         <p>
           Velkommen til Kafe Blå- et lite pusterom midt i hjertet av Sandefjord.
         </p>
-        <p>Hos oss handler alt om ro, gode smaker og ekte råvarer.</p>
+        <p><a href="menu.html">Se menyen vår</a></p>
+      </section>
+      <section>
+        <p>Her hos oss handler alt om ro, gode smaker og ekte råvarer.</p>
         <p>Vi baker med omtanke, brygger kaffen med kjærlighet</p>
         <p>Og ønsker at du skal føle deg som hjemme!</p>
         <p>
           Enten du kommer for en stille stund alene eller en god prat med
           venner.
         </p>
-        <p><a href="menu.html">Se menyen vår</a></p>
       </section>
 
       <figure class="hero-image">
@@ -40,15 +42,43 @@
           Illustrasjon av kaféens uttrykk
         </figcaption>
       </figure>
-
-      
     </main>
 
     <footer>
       <p class="left">© 2025 Kafe Blå – Sandefjord</p>
+
       <p class="center">Klokke</p>
-      <p class="right">Some</p>
+
+      <nav class="right" aria-label="Sosiale medier">
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TikTok</a
+            >
+          </li>
+        </ul>
+      </nav>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
