@@ -8,3 +8,31 @@ body.home {
   background-color: #CAF0F8;
 }
 
+.hero {
+  display: flex;                    
+  align-items: center;              
+  justify-content: space-between;   
+  padding: 2rem 3rem;              
+  background-color: #CAF0F8;        
+}
+
+/* Tekstblokken på venstre side */
+.hero-text {
+  flex: 1;                        
+  max-width: 550px;                 
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;                
+  padding-left: 2rem;               
+}
+
+
+.hero-image img {
+  width: 100%;
+  max-width: 450px;                
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  margin-right: 1rem;               
+}
