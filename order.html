@@ -2,18 +2,130 @@
 <html lang="no">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <title>Cafe blå – bestill</title>
+    <title>Kafe Blå – Bestill</title>
   </head>
 
-  <body>
-    <h1>Order page</h1>
-    <p>  <form id="order-form">
-    
-  </form></p>
+  <body class="order">
+    <header>
+      <h1 class="logo">Kafe Blå</h1>
+      <nav class="hamburgermeny" aria-label="Hovedmeny">
+        <ul>
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="order.html" aria-current="page">Bestill</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- JavaScript til slutt sånn at DOM er klar når scriptet kjører -->
+    <main>
+      <section class="order-banner">
+        <h2>Bestill din kaffe fra Kafe Blå!</h2>
+      </section>
+
+      <section class="order-panel" aria-labelledby="order-heading">
+        <h3 id="order-heading">
+          Vi gjør det enkelt å ta med deg smaken av Kafe Blå
+        </h3>
+        <p class="order-lead">
+          Fyll ut skjemaet under – vi gjør klar bestillingen mens du er på vei.
+        </p>
+
+        <form id="order-form" class="order-form" novalidate>
+          <div class="form-row">
+            <label for="name">Navn</label>
+            <input id="name" name="name" placeholder="Ola Nordmann" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">E-post adresse</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="ola@eksempel.no"
+              required
+            />
+          </div>
+
+          <div class="form-row">
+            <label for="coffee">Velg kaffe</label>
+            <select id="coffee" name="coffee" required>
+              <option value="" selected disabled>Velg…</option>
+              <option>Latte</option>
+              <option>Cappuccino</option>
+              <option>Americano</option>
+              <option>Espresso</option>
+              <option>Flat White</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="cups">Antall kopper</label>
+            <select id="cups" name="cups" required>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="notes">Kommentar/spesialønske</label>
+            <input
+              id="notes"
+              name="notes"
+              placeholder="Havremelk, dobbel espresso"
+            />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-order">Bestill</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p class="left">© 2025 Kafe Blå – Sandefjord</p>
+      <p class="center">Klokke</p>
+      <nav class="right" aria-label="Sosiale medier">
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TikTok</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
