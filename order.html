@@ -8,9 +8,30 @@
   </head>
 
   <body class="order">
-    <header>
-      <h1 class="logo">Kafe Blå</h1>
-      <nav class="hamburgermeny" aria-label="Hovedmeny">
+    <header class="site-header" role="banner">
+      <!-- Venstre: sidetittel -->
+      <div class="page-title">Bestill</div>
+
+      <!-- Midten: logo (lenker til hjem) -->
+      <a class="brand" href="index.html" aria-label="Kafe Blå">
+        <img src="pictures/kafe-bla-logo.jpg" alt="Kafe Blå" />
+        <span class="brand-text">Kafe Blå</span>
+        <!-- fallback-tekst -->
+      </a>
+
+      <!-- Høyre: hamburger -->
+      <button
+        class="hamburger"
+        aria-label="Åpne meny"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </button>
+
+      <!-- Dropdown/off-canvas meny -->
+      <nav id="main-menu" class="menu" hidden>
         <ul>
           <li><a href="index.html">Hjem</a></li>
           <li><a href="menu.html">Meny</a></li>

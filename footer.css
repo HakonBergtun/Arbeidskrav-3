@@ -1,5 +1,5 @@
 footer {
-  background-color:#A9D6E5;
+  background-color: #a9d6e5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,6 +8,3 @@ footer {
   font-size: 1rem;
   color: black;
 }
-
-
-

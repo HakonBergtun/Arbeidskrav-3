@@ -1,17 +1,126 @@
 header {
-  background-color:#A9D6E5;
+  background-color: #a9d6e5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0,5rem 1rem;
+  padding: 0, 5rem 1rem;
   min-height: 70px;
   font-size: 1rem;
   color: black;
 }
-.logo {
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  margin: -1px; border: 0; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* 3-kol grid som SENTERER logo uansett venstre/høyre bredde */
+.site-header {
+  background-color: #A9D6E5;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* venstre / logo / høyre */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  min-height: 70px;
+  position: relative; /* anchor for dropdown */
+  gap: 0.5rem;
+}
+
+/* Venstre: sidetittel */
+.page-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0B3D62;
+}
+
+/* Midten: logo */
+.brand {
+  justify-self: center;         /* center i midtkolonne */
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  text-decoration: none;
+}
+.brand img {
+  height: 40px;                 /* juster logo-høyde */
+  width: auto;
+  display: block;
+}
+.brand-text {
+  display: none;                /* fallback – vises hvis img feiler */
+  font-family: 'Lobster', cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #01497C;
+}
+.brand.text-fallback img { display: none; }
+.brand.text-fallback .brand-text { display: inline; }
+
+/* Høyre: hamburger */
+.hamburger {
+  justify-self: end;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: 0;
+  padding: 6px;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 28px;
+  height: 3px;
+  background: #0B3D62;
+  border-radius: 2px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+/* Dropdown/off-canvas meny */
+.menu {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background: #fff;
+  border: 1px solid #cfefff;
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  margin-top: 0.4rem;
+  z-index: 20;
+}
+.menu ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: grid; gap: 0.5rem;
+}
+.menu a {
+  text-decoration: none;
+  color: #01497C;
+  font-weight: 600;
+}
+.menu a:hover { text-decoration: underline; }
+
+/* Mobil: fullhøyde panel fra høyre + X-animasjon */
+@media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0; right: -100%;
+    height: 100vh; width: 240px;
+    border-radius: 0;
+    padding: 4.5rem 1rem 1rem;
+    transition: right .25s ease;
+  }
+  .menu.active { right: 0; }
+  .hamburger[aria-expanded="true"] .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] .bar:nth-child(2) { opacity: 0; }
+  .hamburger[aria-expanded="true"] .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+  /* .logo {
   font-family:'Lobster', regular;
   font-size: 2rem;                    
   font-weight: 700;                   
   color: #01497C;
   
-}
+} */
+
