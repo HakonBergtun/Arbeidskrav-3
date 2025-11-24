@@ -8,3 +8,9 @@ footer {
   font-size: 1rem;
   color: black;
 }
+footer .right {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  gap: 10px;
+}
