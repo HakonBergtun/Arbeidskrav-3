@@ -7,16 +7,30 @@
     <title>Kafe Blå - Hjem</title>
   </head>
   <body class="home">
-    <header>
-      <h1 class="logo">Kafe Blå</h1>
-      <nav class="hamburgermeny">
-        <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <li><a href="menu.html">Meny</a></li>
-          <li><a href="order.html">Bestill</a></li>
-        </ul>
-      </nav>
-    </header>
+<header class="site-header" role="banner">
+  <!-- Venstre: sidetittel -->
+  <div class="page-title">Hjem</div>
+
+  <!-- Midten: logo (lenker hjem) -->
+  <a class="brand" href="index.html" aria-label="Kafe Blå">
+    <img src="pictures/kafe-bla-logo.jpg" alt="Kafe Blå" />
+    <span class="brand-text">Kafe Blå</span>
+  </a>
+
+  <!-- Høyre: hamburger -->
+  <button class="hamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="main-menu">
+    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+  </button>
+
+  <!-- Navigasjon -->
+  <nav id="main-menu" class="menu" hidden>
+    <ul>
+      <li><a href="index.html" aria-current="page">Hjem</a></li>
+      <li><a href="menu.html">Meny</a></li>
+      <li><a href="order.html">Bestill</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main>
       <section class="hero">

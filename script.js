@@ -1,8 +1,8 @@
-/* ========== HEADER: hamburger (på alle sider) ========== */
+// Hamburger toggle – global
 (() => {
   const btn = document.querySelector(".hamburger");
   const menu = document.getElementById("main-menu");
-  if (!btn || !menu) return; // safe-guard
+  if (!btn || !menu) return;
 
   const openMenu = () => {
     btn.setAttribute("aria-expanded", "true");
