@@ -48,12 +48,14 @@ if (document.body.contains(document.getElementById("order-form"))) {
 }
 // greeting på index
 const greeting = document.getElementById("greeting");
-const hour = new Date().getHours();
+if (greeting) {
+  const hour = new Date().getHours();
 
-if (hour < 12) {
-  greeting.textContent = "God morgen! Klar for dagens første kaffe? ☀️";
-} else if (hour < 18) {
-  greeting.textContent = "God ettermiddag! En kopp til? ☕";
-} else {
-  greeting.textContent = "God kveld! Kaffe før natten? 🌙";
+  if (hour < 12) {
+    greeting.textContent = "God morgen! Klar for dagens første kaffe? ☀️";
+  } else if (hour < 18) {
+    greeting.textContent = "God ettermiddag! En kopp til? ☕";
+  } else {
+    greeting.textContent = "God kveld! Kaffe før natten? 🌙";
+  }
 }
