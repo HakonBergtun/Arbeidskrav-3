@@ -1,6 +1,6 @@
 @import "./header.css";
 @import "./footer.css";
-
+@import "./meny.css";
 body.order {
   background: #e3f6ff;
 }
