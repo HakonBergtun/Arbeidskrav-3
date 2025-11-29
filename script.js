@@ -46,7 +46,7 @@ if (document.body.contains(document.getElementById("order-form"))) {
 
   // TODO: legg inn din order-logikk her (counter, total, tøm, bordnummer, osv)
 }
-// greeting på index
+
 const greeting = document.getElementById("greeting");
 if (greeting) {
   const hour = new Date().getHours();
@@ -59,3 +59,45 @@ if (greeting) {
     greeting.textContent = "God kveld! Kaffe før natten? 🌙";
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const egg = document.querySelector(".coffee-easter-egg");
+  const cup = egg?.querySelector(".coffee-cup");
+  const spill = egg?.querySelector(".coffee-spill");
+
+  let clickCount = 0;
+  const maxClicks = 7;
+
+  if (cup && spill) {
+
+    // 1. Klikk på koppen
+    cup.addEventListener("click", () => {
+      clickCount++;
+
+      if (clickCount === maxClicks) {
+        // Knus koppen
+        cup.classList.add("broken");
+
+        // Etter animasjon — vis pytt
+        setTimeout(() => {
+          cup.style.display = "none";
+          spill.classList.remove("hidden");
+        }, 350);
+      }
+    });
+
+    // 2. Klikk på pytten (reset)
+    spill.addEventListener("click", () => {
+      // Skjul pytten
+      spill.classList.add("hidden");
+
+      // Reset kopp
+      cup.style.display = "block";
+      cup.classList.remove("broken");
+
+      // Start på nytt
+      clickCount = 0;
+    });
+  }
+});

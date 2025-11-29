@@ -7,67 +7,86 @@
     <title>Kafe Blå - Hjem</title>
   </head>
   <body class="home">
-<header class="site-header" role="banner">
-  <!-- Venstre: sidetittel -->
-  <div class="page-title">Hjem</div>
+    <header class="site-header" role="banner">
+      <!-- Venstre: sidetittel -->
+      <div class="page-title">Hjem</div>
 
-  <!-- Midten: logo (lenker hjem) -->
-  <a class="brand" href="index.html" aria-label="Kafe Blå">
-    <img src="pictures/kafe-bla-logo.jpg" alt="Kafe Blå" />
-    <span class="brand-text">Kafe Blå</span>
-  </a>
+      <!-- Midten: logo (lenker hjem) -->
+      <a class="brand" href="index.html" aria-label="Kafe Blå">
+        <img src="pictures/kafe-bla-logo.jpg" alt="Kafe Blå" />
+        <span class="brand-text">Kafe Blå</span>
+      </a>
 
-  <!-- Høyre: hamburger -->
-  <button class="hamburger" aria-label="Åpne meny" aria-expanded="false" aria-controls="main-menu">
-    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-  </button>
+      <!-- Høyre: hamburger -->
+      <button
+        class="hamburger"
+        aria-label="Åpne meny"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+        <span class="bar"></span><span class="bar"></span
+        ><span class="bar"></span>
+      </button>
 
-  <!-- Navigasjon -->
-  <nav id="main-menu" class="site-menu" hidden>
-    <ul>
-      <li><a href="index.html" aria-current="page">Hjem</a></li>
-      <li><a href="menu.html">Meny</a></li>
-      <li><a href="order.html">Bestill</a></li>
-    </ul>
-  </nav>
-</header>
+      <!-- Navigasjon -->
+      <nav id="main-menu" class="site-menu" hidden>
+        <ul>
+          <li><a href="index.html" aria-current="page">Hjem</a></li>
+          <li><a href="menu.html">Meny</a></li>
+          <li><a href="order.html">Bestill</a></li>
+        </ul>
+      </nav>
+    </header>
 
- <main>
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-text">
-        <h2 id="greeting"></h2>
-        <h2>Velkommen til Kafe Blå</h2>
-        <p>Ett lite pusterom i hjertet av Sandefjord</p>
-        <p><a href="menu.html" class="btn-menu">Se menyen vår</a></p>
-      </div>
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-text">
+            <h2 id="greeting"></h2>
+            <h2>Velkommen til Kafe Blå</h2>
+            <p>Ett lite pusterom i hjertet av Sandefjord</p>
+            <p><a href="menu.html" class="btn-menu">Se menyen vår</a></p>
+          </div>
 
-      <div class="text-section">
-        <p>Her hos oss handler alt om ro, gode smaker og ekte råvarer.</p>
-        <p>Vi baker med omtanke, brygger kaffen med kjærlighet</p>
-        <p>Og ønsker at du skal føle deg som hjemme!</p>
-        <p>Enten du kommer for en stille stund alene eller en god prat med venner.</p>
-        <p>Her ønsker vi å skape mer enn bare en kaffestopp</p>
-        <p>vi vil tilby et sted der du kan senke skuldrene</p>
-        <p>finne ro og kjenne på gleden av gode smaker laget med omtanke.</p>
-        <p>Hos oss står kvalitet og enkelhet i sentrum.</p>
-        <p>Vi baker alt fra grunnen med ferske, lokale råvarer,</p>
-        <p>og vi brygger kaffen vår med kjærlighet og presisjon.</p>
-        <p>Enten du foretrekker en klassisk espresso, en rund cappuccino eller en søt og mild latte,</p>
-        <p>lager vi hver kopp som om den var til en venn.</p>
-      </div>
-    </div>
+          <div class="text-section">
+            <p>Her hos oss handler alt om ro, gode smaker og ekte råvarer.</p>
+            <p>Vi baker med omtanke, brygger kaffen med kjærlighet</p>
+            <p>Og ønsker at du skal føle deg som hjemme!</p>
+            <p>
+              Enten du kommer for en stille stund alene eller en god prat med
+              venner.
+            </p>
+            <p>Her ønsker vi å skape mer enn bare en kaffestopp</p>
+            <p>vi vil tilby et sted der du kan senke skuldrene</p>
+            <p>
+              finne ro og kjenne på gleden av gode smaker laget med omtanke.
+            </p>
+            <p>Hos oss står kvalitet og enkelhet i sentrum.</p>
+            <p>Vi baker alt fra grunnen med ferske, lokale råvarer,</p>
+            <p>og vi brygger kaffen vår med kjærlighet og presisjon.</p>
+            <p>
+              Enten du foretrekker en klassisk espresso, en rund cappuccino
+              eller en søt og mild latte,
+            </p>
+            <p>lager vi hver kopp som om den var til en venn.</p>
+          </div>
+        </div>
 
-    <figure class="hero-image">
-      <img src="pictures/Kafe bla hjemmeside.jpg" alt="Bilde av meny" />
-    </figure>
-  </section>
-</main>
+        <figure class="hero-image">
+          <img src="pictures/Kafe bla hjemmeside.jpg" alt="Bilde av meny" />
+        </figure>
+      </section>
+    </main>
 
     <footer>
       <p class="left">© 2025 Kafe Blå – Sandefjord</p>
 
-      <p class="center">Klokke</p>
+      <p class="center">Åpningstider- 08:00-16:00</p>
+
+      <div class="coffee-easter-egg" aria-hidden="true">
+        <img src="icons/icon-cup.png" alt="" class="coffee-cup" />
+        <img src="icons/icon-puddle.png" alt="" class="coffee-spill hidden" />
+      </div>
 
       <nav class="right" aria-label="Sosiale medier">
         <p>Sjekk oss ut på sosiale medier</p>
@@ -78,10 +97,8 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="lenke til facebook"
-              
-              ><img src="icons/img_facebook.png" alt=""></a
-              
-            >
+              ><img src="icons/img_facebook.png" alt=""
+            /></a>
           </li>
           <li>
             <a
@@ -89,9 +106,8 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="lenke til instagram"
-             
-              ><img src="icons/img_instagram.png" alt=""></a
-            >
+              ><img src="icons/img_instagram.png" alt=""
+            /></a>
           </li>
           <li>
             <a
@@ -99,9 +115,8 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="lenke til tiktok"
-              
-              ><img src="icons/img_tiktok.png" alt=""></a
-            >
+              ><img src="icons/img_tiktok.png" alt=""
+            /></a>
           </li>
         </ul>
       </nav>
