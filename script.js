@@ -71,15 +71,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (cup && spill) {
 
-    // 1. Klikk på koppen
+   
     cup.addEventListener("click", () => {
       clickCount++;
 
       if (clickCount === maxClicks) {
-        // Knus koppen
+        
         cup.classList.add("broken");
 
-        // Etter animasjon — vis pytt
+        
         setTimeout(() => {
           cup.style.display = "none";
           spill.classList.remove("hidden");
@@ -87,16 +87,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // 2. Klikk på pytten (reset)
+   
     spill.addEventListener("click", () => {
-      // Skjul pytten
+     
       spill.classList.add("hidden");
 
-      // Reset kopp
+     
       cup.style.display = "block";
       cup.classList.remove("broken");
 
-      // Start på nytt
+     
       clickCount = 0;
     });
   }
