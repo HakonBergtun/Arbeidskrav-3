@@ -6,7 +6,6 @@ body.order {
   background: #e3f6ff;
 }
 
-/* Toppstripe */
 .order-banner {
   background: #aeddff;
   padding: 0.75rem 1rem;
@@ -20,7 +19,6 @@ body.order {
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 }
 
-/* Panel som holder intro + skjema */
 .order-panel {
   background: #cfefff;
   max-width: 980px;
@@ -33,7 +31,6 @@ body.order {
   margin: 0 0 1rem;
 }
 
-/* Skjema */
 .order-form {
   max-width: 620px;
   margin: 0 auto;

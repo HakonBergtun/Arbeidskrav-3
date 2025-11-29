@@ -91,6 +91,12 @@
               <option>9</option>
               <option>10</option>
             </select>
+
+            <div class="qty-controls" aria-label="Juster antall">
+              <button type="button" class="qty-minus">–</button>
+              <span id="qty-value">1</span>
+              <button type="button" class="qty-plus">+</button>
+            </div>
           </div>
 
           <div class="form-row">
@@ -106,37 +112,60 @@
             <button type="submit" class="btn btn-order">Bestill</button>
           </div>
         </form>
+        <div class="order-summary" aria-live="polite">
+          <p><strong>Total:</strong> <span id="grand-total">0 kr</span></p>
+          <div class="summary-actions">
+            <button type="button" id="clear-order" class="btn btn-order">
+              Tøm bestilling
+            </button>
+            <button type="button" id="set-table" class="btn btn-order">
+              Sett bordnr.
+            </button>
+          </div>
+          <p id="table-output" class="table-output"></p>
+        </div>
       </section>
     </main>
 
     <footer>
       <p class="left">© 2025 Kafe Blå – Sandefjord</p>
-      <p class="center">Klokke</p>
+
+      <p class="center">Åpningstider- 08:00-16:00</p>
+
+      <div class="coffee-easter-egg" aria-hidden="true">
+        <img src="icons/icon-cup.png" alt="" class="coffee-cup" />
+        <img src="icons/icon-puddle.png" alt="" class="coffee-spill hidden" />
+      </div>
+
       <nav class="right" aria-label="Sosiale medier">
+        <p>Sjekk oss ut på sosiale medier</p>
         <ul class="social-links">
           <li>
             <a
               href="https://www.facebook.com"
               target="_blank"
               rel="noopener noreferrer"
-              >Facebook</a
-            >
+              aria-label="lenke til facebook"
+              ><img src="icons/img_facebook.png" alt=""
+            /></a>
           </li>
           <li>
             <a
               href="https://www.instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              >Instagram</a
-            >
+              aria-label="lenke til instagram"
+              ><img src="icons/img_instagram.png" alt=""
+            /></a>
           </li>
           <li>
             <a
               href="https://www.tiktok.com"
               target="_blank"
               rel="noopener noreferrer"
-              >TikTok</a
-            >
+              aria-label="lenke til tiktok"
+              ><img src="icons/img_tiktok.png" alt=""
+            /></a>
           </li>
         </ul>
       </nav>
