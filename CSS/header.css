@@ -47,19 +47,6 @@ header {
   width: auto;
   display: block;
 }
-.brand-text {
-  display: none;
-  font-family: "Lobster", cursive;
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #01497c;
-}
-.brand.text-fallback img {
-  display: none;
-}
-.brand.text-fallback .brand-text {
-  display: inline;
-}
 
 .hamburger {
   justify-self: end;
